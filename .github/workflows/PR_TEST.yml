@@ -1,19 +1,11 @@
-// PR_Test.yml
-name: PR Test
-on: 
-	pull_request:   #pr이벤트를 감지
-    	branches:
-        	- master  #test라는 브랜치에 한해서
-
-
-jobs: 
-	Run Jest:
-    	runs-on: [ubuntu-latest] # 우분투 가상환경 사용
-        strategy:
-          matrix:
-            node-version: [.x]
-
-- name: test code
-  run: 
-  	npm install
-    npm test
+name: CI
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: npm install
+    - name: Run tests
+      run: npm run test
