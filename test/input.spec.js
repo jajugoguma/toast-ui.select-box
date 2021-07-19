@@ -18,7 +18,7 @@ describe('Input', () => {
   it('should make a div and p elements.', () => {
     const { el, placeholderEl } = input;
     expect(document.querySelector(`.${cls.INPUT}`)).toBe(el);
-    expect(document.querySelector(`.${cls.PLACEHOLDER}`)).toBe(placeholderEl);
+    expect(document.querySelector(`.${cls.PLACEHOLDER}`)).toBe(null);
   });
 
   it('should not make an icon when showIcon is false.', () => {
