@@ -17,7 +17,7 @@ describe('ItemGroup', () => {
     });
     itemGroup.appendToContainer(
       document.getElementById('container1'),
-      document.getElementById('native-container')
+      document.getElementById('native-container1')
     );
   });
 
