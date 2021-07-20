@@ -27,7 +27,7 @@ describe('ItemGroup', () => {
 
   it('should make label, itemContainer, optgroup elements.', () => {
     const { itemContainerEl, nativeEl } = itemGroup;
-    expect(document.querySelector(`.${cls.ITEM_GROUP_LABEL}`)).toHaveTextContent('fruit12');
+    expect(document.querySelector(`.${cls.ITEM_GROUP_LABEL}`)).toHaveTextContent('fruit');
     expect(document.querySelector(`.${cls.ITEM_GROUP}`)).toBe(itemContainerEl);
     expect(document.querySelector('optgroup')).toBe(nativeEl);
   });
