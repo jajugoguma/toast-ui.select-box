@@ -16,8 +16,8 @@ describe('ItemGroup', () => {
       index: 0
     });
     itemGroup.appendToContainer(
-      document.getElementById('container1'),
-      document.getElementById('native-container1')
+      document.getElementById('container'),
+      document.getElementById('native-container')
     );
   });
 
@@ -27,7 +27,7 @@ describe('ItemGroup', () => {
 
   it('should make label, itemContainer, optgroup elements.', () => {
     const { itemContainerEl, nativeEl } = itemGroup;
-    expect(document.querySelector(`.${cls.ITEM_GROUP_LABEL}`)).toHaveTextContent('fruit1');
+    expect(document.querySelector(`.${cls.ITEM_GROUP_LABEL}`)).toHaveTextContent('fruit');
     expect(document.querySelector(`.${cls.ITEM_GROUP}`)).toBe(itemContainerEl);
     expect(document.querySelector('optgroup')).toBe(nativeEl);
   });
